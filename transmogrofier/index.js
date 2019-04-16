@@ -8,9 +8,17 @@ const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
+const bs = require('browser-sync').create();
 
 // settings and site specific vars
-const { cwd, dist, sass:styles, pages, portfolio } = require('./config');
+const { 
+  cwd, 
+  dist, 
+  sass:styles, 
+  pages, 
+  portfolio,
+  baseDir, 
+} = require('./config');
 const siteGlobalVals = require(`../site_src/globals`);
 
 // Individual Tasks
@@ -53,16 +61,36 @@ function buildPortfolio(){
     .pipe(dest(portfolio.dist));
 }
 
+function startServer(cb){
+  // console.log('dist is:');
+  // console.log(dist);
+  bs.init({
+    server: {
+      baseDir: dist,
+    },
+  });
+  cb();
+}
+
+function reloadServer(cb){
+  bs.reload();
+  cb();
+}
+function watchDist(){
+  const serverGlob = `${dist}**/*`;
+  watch(serverGlob, reloadServer);
+}
+
 function watchSass(){
-  watch(styles.glob, { cwd, ignoreInitial: false, }, buildSass );
+  watch(styles.glob, { cwd }, buildSass );
 }
 
 function watchPages(){
-  watch(pages.glob, { cwd, ignoreInitial: false, }, buildPages );
+  watch(pages.glob, { cwd }, buildPages );
 }
 
 function watchPortfolio(){
-  let opts = { cwd, ignoreInitial: false, ignored: 'portfolio/_*.pug' };
+  let opts = { cwd, ignored: 'portfolio/_*.pug' };
   watch(portfolio.glob, opts , buildPortfolio );
 }
 
@@ -72,5 +100,10 @@ exports.clean = cleanDist;
 exports.pages = buildPages;
 exports.portfolio = buildPortfolio;
 exports.build = series(cleanDist, parallel(buildSass, buildPages, buildPortfolio));
-exports.dev = series(cleanDist, parallel(watchSass, watchPages, watchPortfolio));
+exports.dev = series(
+  cleanDist, 
+  parallel(buildSass, buildPages,buildPortfolio),
+  startServer, 
+  parallel(watchSass, watchPages, watchPortfolio, watchDist)
+);
 

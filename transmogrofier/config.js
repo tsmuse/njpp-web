@@ -1,6 +1,7 @@
 const config = {
   cwd: './site_src/',
   dist: './dist/',
+  baseDir: '../dist/',
   pages: {
     src: 'pages/',
     glob: 'pages/*.pug',
