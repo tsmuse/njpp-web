@@ -22,6 +22,16 @@ const config = {
     glob: 'static/js/*.js',
     dist: './dist/js/',
   },
+  css: {
+    src: 'static/css/',
+    glob: 'static/css/**/*',
+    dist: './dist/css',
+  },
+  imgs: {
+    src: 'static/img/',
+    glob: 'static/img/**/*.{png,svg}',
+    dist: './dist/img'
+  },
 };
 
 module.exports = config;

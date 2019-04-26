@@ -17,13 +17,22 @@ const {
   sass:styles, 
   pages, 
   portfolio,
-  baseDir, 
+  css, 
+  imgs
 } = require('./config');
 const siteGlobalVals = require(`../site_src/globals`);
 
 // Individual Tasks
 
 // Utility functions
+function moveCSS(){
+  return src(css.glob, { cwd })
+    .pipe(dest(css.dist));
+}
+function moveImgs(){
+  return src(imgs.glob, { cwd })
+    .pipe(dest(imgs.dist));
+}
 function cleanDist(){
   return del(`${dist}**/*`);
 }
@@ -62,8 +71,6 @@ function buildPortfolio(){
 }
 
 function startServer(cb){
-  // console.log('dist is:');
-  // console.log(dist);
   bs.init({
     server: {
       baseDir: dist,
@@ -99,10 +106,10 @@ exports.sass = buildSass;
 exports.clean = cleanDist;
 exports.pages = buildPages;
 exports.portfolio = buildPortfolio;
-exports.build = series(cleanDist, parallel(buildSass, buildPages, buildPortfolio));
+exports.build = series(cleanDist, parallel(buildSass, buildPages, buildPortfolio, moveCSS, moveImgs));
 exports.dev = series(
   cleanDist, 
-  parallel(buildSass, buildPages,buildPortfolio),
+  parallel(buildSass, buildPages,buildPortfolio, moveCSS, moveImgs),
   startServer, 
   parallel(watchSass, watchPages, watchPortfolio, watchDist)
 );
