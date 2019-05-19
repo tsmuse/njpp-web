@@ -32,6 +32,11 @@ const config = {
     glob: 'static/img/**/*.{png,svg}',
     dist: './dist/img'
   },
+  fonts: {
+    src: 'static/fonts/',
+    glob: 'static/fonts/**/*',
+    dist: './dist/fonts'
+  }
 };
 
 module.exports = config;

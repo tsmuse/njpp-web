@@ -18,7 +18,8 @@ const {
   pages, 
   portfolio,
   css, 
-  imgs
+  imgs,
+  fonts
 } = require('./config');
 const siteGlobalVals = require(`../site_src/globals`);
 
@@ -32,6 +33,11 @@ function moveCSS(){
 function moveImgs(){
   return src(imgs.glob, { cwd })
     .pipe(dest(imgs.dist));
+}
+
+function moveFonts(){
+  return src(fonts.glob, { cwd })
+    .pipe(dest(fonts.dist));
 }
 function cleanDist(){
   return del(`${dist}**/*`);
@@ -101,15 +107,26 @@ function watchPortfolio(){
   watch(portfolio.glob, opts , buildPortfolio );
 }
 
+// build chains
+const buildChain = [
+  buildSass, 
+  buildPages, 
+  buildPortfolio, 
+  moveCSS, 
+  moveImgs, 
+  moveFonts
+];
+
+
 // Gulp commands
 exports.sass = buildSass;
 exports.clean = cleanDist;
 exports.pages = buildPages;
 exports.portfolio = buildPortfolio;
-exports.build = series(cleanDist, parallel(buildSass, buildPages, buildPortfolio, moveCSS, moveImgs));
+exports.build = series(cleanDist, parallel(...buildChain));
 exports.dev = series(
   cleanDist, 
-  parallel(buildSass, buildPages,buildPortfolio, moveCSS, moveImgs),
+  parallel(...buildChain),
   startServer, 
   parallel(watchSass, watchPages, watchPortfolio, watchDist)
 );
