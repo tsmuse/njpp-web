@@ -19,7 +19,8 @@ const {
   portfolio,
   css, 
   imgs,
-  fonts
+  fonts,
+  js
 } = require('./config');
 const siteGlobalVals = require(`../site_src/globals`);
 
@@ -51,7 +52,13 @@ function buildSass(){
     .pipe(dest(styles.dist));
 }
 
-function processJS(){}
+function processJS(){
+  return src(js.glob, { cwd })
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(dest(js.dist));
+}
 
 // "Pages" are pages that have a unique template. Pages exist primarily to take advantage of includes
 function buildPages(){
@@ -107,14 +114,27 @@ function watchPortfolio(){
   watch(portfolio.glob, opts , buildPortfolio );
 }
 
+function watchJS(){
+  watch(js.glob, { cwd }, processJS );
+}
+
 // build chains
 const buildChain = [
   buildSass, 
-  buildPages, 
+  buildPages,
+  processJS, 
   buildPortfolio, 
   moveCSS, 
   moveImgs, 
   moveFonts
+];
+
+const watchChain = [
+  watchSass, 
+  watchPages, 
+  watchPortfolio, 
+  watchDist,
+  watchJS,
 ];
 
 
@@ -128,6 +148,6 @@ exports.dev = series(
   cleanDist, 
   parallel(...buildChain),
   startServer, 
-  parallel(watchSass, watchPages, watchPortfolio, watchDist)
+  parallel(...watchChain)
 );
 
