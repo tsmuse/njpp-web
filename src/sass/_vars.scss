@@ -1,0 +1,16 @@
+// typography
+$light-type: 200;
+$book-type: 300;
+$bold-type: 700;
+
+// colors
+$pale:hsl(146, 21%, 94%);
+$dark:hsl(24, 11%, 9%);
+$pale-accent:hsl(153, 25%, 75%);
+$bright-accent:hsl(35, 74%, 73%);
+$contrast-accent:hsl(287, 92%, 47%);
+
+$link-color: $bright-accent;
+$col-grad-color: $pale-accent;
+
+$link-hover-shadow: inset 0 -0.6rem 0 0 $link-color;

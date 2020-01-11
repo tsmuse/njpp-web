@@ -1,0 +1,32 @@
+---
+layout: layouts/base
+pagination:
+  data: pages
+  size: 1
+  alias: dp
+permalink: "portfolio/{{dp.title | slug }}/"
+---
+<div class="direct-portfolio">
+  {% include landing_nav %}
+  <!-- this will need to be replaced with a specific nav -->
+  <section class="sidebar">
+    <h1>{{dp.title}}</h1>
+    {% for p in dp.sidebar %}
+      <p>{{ p }}</p>
+    {% endfor %}
+  </section>
+  <section class="content">
+    <ul class="portfolio-items">
+      {% for item in dp.items %}
+        <li>
+          <a href="portfolio/{{item.title}}/">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.desc }}</p>
+            <!-- image stuff goes here -->
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% include footer %}
+</div>

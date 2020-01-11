@@ -1,0 +1,233 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block; }
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+body {
+  font-family: mr-eaves-modern, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #191614; }
+  .wf-active body {
+    font-size: 19px;
+    line-height: 1.5; }
+
+a {
+  text-decoration: none;
+  color: #191614;
+  transition: box-shadow 0.2s ease-in-out;
+  box-shadow: inset 0 -0.1rem 0 #edc387; }
+  a:hover {
+    box-shadow: inset 0 -0.6rem 0 0 #edc387; }
+  a:visited {
+    color: #444; }
+
+footer {
+  background-color: rgba(25, 22, 20, 0.95);
+  color: #ecf3ef;
+  padding: 2rem;
+  display: flex; }
+  footer div {
+    flex: 1;
+    padding: 0 2rem;
+    height: 100%; }
+  footer .contact-list {
+    flex: 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; }
+    footer .contact-list li {
+      margin-right: 1rem; }
+      footer .contact-list li:last-of-type {
+        margin-right: 0; }
+    footer .contact-list a {
+      color: #ecf3ef; }
+
+.direct-portfolio {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap; }
+  @media screen and (min-width: 731px) {
+    .direct-portfolio {
+      display: grid;
+      grid-template-columns: 2.75fr 3fr;
+      grid-template-rows: 75px auto 115px; } }
+  @media screen and (min-width: 1024px) {
+    .direct-portfolio {
+      grid-template-columns: 31vw 3fr;
+      grid-template-rows: 75px auto 115px;
+      background-image: linear-gradient(to right, #fff 31vw, #afcfc1 31vw, #afcfc1 54vw, #ecf3ef 54vw, #ecf3ef 77vw, #afcfc1 77vw); } }
+  .direct-portfolio nav {
+    flex: 0 0 75px;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem; }
+    @media screen and (min-width: 731px) {
+      .direct-portfolio nav {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2; } }
+    .direct-portfolio nav .site-title {
+      flex: 0 0 auto;
+      font-size: 2.5rem; }
+    .direct-portfolio nav .landing-nav-list {
+      flex: 1;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end; }
+      .direct-portfolio nav .landing-nav-list li {
+        margin-right: 0.75rem; }
+        .direct-portfolio nav .landing-nav-list li:last-of-type {
+          margin-right: 0; }
+      .direct-portfolio nav .landing-nav-list a {
+        color: #000;
+        font-size: 0.95rem;
+        box-shadow: inset 0 0 0 #ccc; }
+        .direct-portfolio nav .landing-nav-list a:hover {
+          box-shadow: inset 0 -0.6rem 0 0 #edc387; }
+        .direct-portfolio nav .landing-nav-list a:visited {
+          color: #524842; }
+  .direct-portfolio .sidebar {
+    flex: 2;
+    padding: 1rem 2.5rem; }
+    @media screen and (min-width: 731px) {
+      .direct-portfolio .sidebar {
+        min-width: 425px;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: 1rem 2.5rem; } }
+    @media screen and (min-width: 1024px) {
+      .direct-portfolio .sidebar {
+        min-width: 335px;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: 1rem 2.5rem; } }
+    .direct-portfolio .sidebar h1 {
+      font-size: 3.5rem; }
+      @media screen and (min-width: 1200px) {
+        .direct-portfolio .sidebar h1 {
+          font-size: 4.5rem; } }
+    .direct-portfolio .sidebar p {
+      margin-bottom: 0.75rem; }
+  .direct-portfolio .content {
+    flex: 1; }
+    @media screen and (min-width: 731px) {
+      .direct-portfolio .content {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3; } }
+    .direct-portfolio .content .portfolio-items {
+      width: 100%; }
+      @media screen and (min-width: 731px) {
+        .direct-portfolio .content .portfolio-items {
+          display: flex;
+          flex-flow: column nowrap; } }
+      @media screen and (min-width: 1024px) {
+        .direct-portfolio .content .portfolio-items {
+          flex-flow: row nowrap;
+          height: 100%; } }
+      .direct-portfolio .content .portfolio-items li {
+        flex: 1 0 23vw;
+        display: flex;
+        flex-flow: column nowrap; }
+        .direct-portfolio .content .portfolio-items li:nth-of-type(2n+1) a {
+          background-color: #afcfc1; }
+        @media screen and (min-width: 1024px) {
+          .direct-portfolio .content .portfolio-items li {
+            background-color: transparent; } }
+      .direct-portfolio .content .portfolio-items li h2 {
+        font-weight: 200;
+        font-size: 2.7rem; }
+      .direct-portfolio .content .portfolio-items li a {
+        display: flex;
+        flex: 1;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: 4rem 2rem;
+        box-shadow: none;
+        background-color: #ecf3ef;
+        transition: background 0.2s ease-in-out; }
+        @media screen and (min-width: 1024px) {
+          .direct-portfolio .content .portfolio-items li a {
+            background-color: transparent; } }
+        .direct-portfolio .content .portfolio-items li a:hover {
+          background: #cfe2da; }
+          .direct-portfolio .content .portfolio-items li a:hover h2 {
+            color: #b60ae6; }
+  .direct-portfolio footer {
+    flex: 0 0 100px; }
+    @media screen and (min-width: 731px) {
+      .direct-portfolio footer {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4; } }
+
+/*# sourceMappingURL=maps/njpp.css.map */
