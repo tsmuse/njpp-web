@@ -1,14 +1,14 @@
 body {
-  font-family: mr-eaves-modern, sans-serif;
+  font-family: Work Sans, sans-serif;
   font-weight: $book-type;
   font-size: 16px;
   line-height: 1.75;
   color: $dark;
 
-  .wf-active & {
-    font-size: 19px;
-    line-height: 1.5;
-  }
+  // .wf-active & {
+  //   font-size: 19px;
+  //   line-height: 1.5;
+  // }
 }
 
 a {
@@ -21,6 +21,16 @@ a {
   }
   &:visited {
     color: #444;
+  }
+}
+
+a.title-link {
+  box-shadow: none;
+  &:hover{
+    box-shadow: none;
+  }
+  &:visited {
+    color: $dark;
   }
 }
 
