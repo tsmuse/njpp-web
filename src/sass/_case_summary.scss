@@ -3,7 +3,7 @@ $nav-bar-height: 70px;
   position: fixed;
   height: $nav-bar-height;
   width: 100%;
-  background-color: $pale-accent;
+  background-color: #fff;
   z-index: 10;
   nav {
     display: flex;
@@ -36,15 +36,15 @@ $nav-bar-height: 70px;
   padding-top: $nav-bar-height; 
 }
 
-$shape-height: 300px;
+$shape-height: 280px;
 .case-summary-title {
   background-color: $pale-accent;
   height: $shape-height;
   width: 100%;
-  clip-path: polygon(0 0, 0 $shape-height, 100% 0);
-  shape-outside: polygon(0 0, 0 calc(#{$shape-height} + 1.5rem), 100% 1.5rem, 100% 0);  
+  clip-path: polygon(0 0, 0 $shape-height *0.7, 50% $shape-height * 0.45, 60% 0 );
+  shape-outside: polygon(0 0, 0 calc(#{$shape-height}* 0.7 + 1.5rem), 50% calc(#{$shape-height} * 0.45 + 1.5rem), calc(60% + 1rem) 0 );
   z-index: 5;
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
   float: left;
 
   h1 {
@@ -54,12 +54,133 @@ $shape-height: 300px;
   }
 }
 
-.case-summary-content {
-  padding: 6.5rem 2rem 2rem;
+.case-summary-image {
+  margin-top: 0;
+  margin-bottom: 1rem;
   width: 100%;
-  max-width: 84ch;
-  margin: 0 auto;
+  display: inline-block;
+  @media screen and (min-width: 768px) {
+    width: auto;
+    margin-bottom: 2rem;
+  }
+  
+  
+  &-left {
+    margin-right: 0;
+    
+    float: none;
+    @media screen and (min-width: 768px) {
+      margin-right: 1rem;
+      float: left;
+      box-shadow: -0.5rem 0.5rem 0 $pale;
+    }
+  }
+  &-right {
+    margin-left: 0;
+    
+    float: none;
+    @media screen and (min-width: 768px) {
+      margin-left: 1rem;
+      float: right;
+      box-shadow: 0.5rem 0.5rem 0 $pale;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
+.see-more-cta {
+  width: 100%;
+  height: 11rem;
+  max-width: 84ch;
+  background-repeat: no-repeat;
+  margin: 0 0 1.5rem 1rem;
+  padding: 1rem;
+  background-image: linear-gradient(
+      to right, 
+      $pale-accent 11rem, 
+      #fff 11rem, 
+      #fff 100%
+    );
+  @media screen and (min-width: 768px) {
+    height: 15rem;
+    margin: 0 auto 1.5rem;
+    background-image: linear-gradient(
+      to right, 
+      $pale-accent 15rem, 
+      #fff 15rem, 
+      #fff 100%
+    );
+    padding: 3rem 2rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  .email {
+    font-weight: $bold-type;
+  }
+}
+
+.case-summary-content {
+  // padding: 1rem 2rem 2rem;
+  padding: 1rem;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    padding: 2rem;
+    
+    max-width: 84ch;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    @media screen and (min-width: 768px) {
+      font-size: 3.2rem;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    @media screen and (min-width: 768px) {
+      padding: 0 2rem;
+    }
+  }
+
+  ul {
+    list-style: square;
+  }
+}
+
+.list-clear {
+  // fix for: bullets don't get pushed out by floated margins correctly
+    clear: left; 
+}
 
 
