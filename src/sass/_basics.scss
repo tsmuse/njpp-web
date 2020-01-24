@@ -37,19 +37,30 @@ a.title-link {
 footer {
   background-color: transparentize($dark, 0.05);
   color: $pale;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
+  flex-flow: column nowrap;
+
+  @media screen and (min-width: 1000px){
+    flex-flow: row nowrap;
+  }
 
   div {
     flex: 1;
-    padding: 0 2rem;
+    padding: 0;
     height: 100%;
   }
+
   .contact-list {
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    
+    @media screen and (min-width: 1000px) {
+     justify-content: flex-end;
+    }
+
 
     li {
       margin-right: 1rem;
