@@ -1,3 +1,64 @@
 .site-title {
   font-size: 2rem;
 }
+
+.main-nav-list {
+  display: flex;
+  flex-flow: column nowrap;
+  background: $pale;
+  height: 100vh;
+  width: 90vw;
+  max-width: 400px;
+  position: absolute;
+  top: $fixed-menu-bar-height;
+  left: -100vw;
+  transition: left 0.4s ease-out;
+  padding: 2rem;
+  
+  &.open {
+    left: 0;
+
+  }
+
+  @media screen and (min-width: 930px){
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    height: auto;
+    width: auto;
+    max-width: unset;
+    position: static;
+    transition: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    @media screen and (min-width: 930px){
+      margin-right: 0.5rem;
+      margin-bottom: 0;
+      
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.main-nav-toggle {
+  display: inline-block;
+  background: transparent;
+  font-size: 1.2rem;
+  border: 1px solid $dark;
+  @media screen and (min-width: 930px){
+    display: none;
+  }
+}

@@ -1,7 +1,8 @@
-$nav-bar-height: 70px;
+
+// this seems likely to be a broader component, maybe...
 .case-summary-header {
   position: fixed;
-  height: $nav-bar-height;
+  height: $fixed-menu-bar-height;
   width: 100%;
   background-color: #fff;
   z-index: 10;
@@ -9,6 +10,7 @@ $nav-bar-height: 70px;
     display: flex;
     flex-flow: row nowrap;
     padding: 0 1rem;
+    align-items: center;
 
     .site-title {
       flex: 2 0 auto;
@@ -16,24 +18,12 @@ $nav-bar-height: 70px;
 
     .main-nav-list {
       flex: 1 0 auto;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: flex-end;
-      align-items: center;
-      
-      li {
-        margin-right: 0.5rem;
-
-        &:last-of-type {
-          margin-right: 0;
-        }
-      }
     }
   }
 }
 
 .case-summary-main {
-  padding-top: $nav-bar-height; 
+  padding-top: $fixed-menu-bar-height; 
 }
 
 $shape-height: 280px;
@@ -85,14 +75,10 @@ $shape-height: 280px;
       box-shadow: 0.5rem 0.5rem 0 $pale;
     }
   }
-
-  img {
-    width: 100%;
-  }
 }
 
 .see-more-cta {
-  width: 100%;
+  width: calc(100% - 1.5rem);
   height: 11rem;
   max-width: 84ch;
   background-repeat: no-repeat;
@@ -152,14 +138,15 @@ $shape-height: 280px;
 
   h2 {
     font-size: 1.75rem;
-    margin-bottom: 1rem;
   }
 
   h3 {
     font-size: 1.25rem;
+    line-height: 1.3;
   }
 
   p {
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
   }
 
@@ -170,6 +157,10 @@ $shape-height: 280px;
     padding: 0 1.5rem;
     @media screen and (min-width: 768px) {
       padding: 0 2rem;
+    }
+
+    li {
+      font-size: 1.1rem;
     }
   }
 
