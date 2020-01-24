@@ -6,9 +6,16 @@ pagination:
   alias: dp
 permalink: "portfolio/{{dp.title | slug }}/"
 ---
-<div class="direct-portfolio">
-  {% include landing_nav %}
-  <!-- this will need to be replaced with a specific nav -->
+<main class="direct-portfolio">
+  <nav class="floating-nav">
+    <p class="site-title">Tony Santos</p>
+    <ul class="floating-nav-list">
+    {% for item in menus.directPortfolio %}
+      <li><a href="/{{item}}/">{{ item | replace: "-", " " | capitalize }}</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
+  {% include fixed-top-nav, menuToRender: menus.directPortfolio %}
   <section class="sidebar">
     <h1>{{dp.title}}</h1>
     {% for p in dp.sidebar %}
@@ -22,11 +29,10 @@ permalink: "portfolio/{{dp.title | slug }}/"
           <a href="/portfolio/{{item.title}}/">
             <h2>{{ item.title }}</h2>
             <p>{{ item.desc }}</p>
-            <!-- image stuff goes here -->
           </a>
         </li>
       {% endfor %}
     </ul>
   </section>
   {% include footer %}
-</div>
+</main>

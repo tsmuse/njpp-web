@@ -2,7 +2,7 @@
   font-size: 2rem;
 }
 
-.main-nav-list {
+.fixed-nav-list {
   display: flex;
   flex-flow: column nowrap;
   background: $pale;
@@ -53,12 +53,33 @@
   }
 }
 
-.main-nav-toggle {
+.fixed-nav-toggle {
   display: inline-block;
   background: transparent;
   font-size: 1.2rem;
   border: 1px solid $dark;
   @media screen and (min-width: 930px){
     display: none;
+  }
+}
+
+// fixed top nav
+.fixed-top-nav {
+  position: fixed;
+  height: $fixed-menu-bar-height;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 1rem;
+  align-items: center;
+
+  .site-title {
+    flex: 2 0 auto;
+  }
+
+  .main-nav-list {
+    flex: 1 0 auto;
   }
 }
