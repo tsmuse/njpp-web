@@ -19,7 +19,7 @@ permalink: "portfolio/{{dp.title | slug }}/"
     <ul class="portfolio-items">
       {% for item in dp.items %}
         <li>
-          <a href="/portfolio/{{item.title}}/">
+          <a href="/portfolio/{{item.title | replace: " ", "-"| downcase }}/">
             <h2>{{ item.title }}</h2>
             <p>{{ item.desc }}</p>
           </a>
