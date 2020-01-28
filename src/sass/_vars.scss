@@ -14,7 +14,11 @@ $contrast-accent:hsl(287, 92%, 47%);
 $link-color: $bright-accent;
 $col-grad-color: $pale-accent;
 
+$link-underline-shadow: inset 0 -0.1rem 0 $link-color;
 $link-hover-shadow: inset 0 -0.6rem 0 0 $link-color;
 
 // heights used to calculate things
 $fixed-menu-bar-height: 70px;
+
+// animation timings
+$link-hover-transition: box-shadow 0.2s ease-in-out;

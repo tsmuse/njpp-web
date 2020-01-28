@@ -14,8 +14,8 @@ body {
 a {
   text-decoration: none;
   color: $dark;
-  transition: box-shadow 0.2s ease-in-out;
-  box-shadow: inset 0 -0.1rem 0 $link-color;
+  transition: $link-hover-transition;
+  box-shadow: $link-underline-shadow;
   &:hover{
     box-shadow: $link-hover-shadow;
   }

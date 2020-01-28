@@ -3,6 +3,8 @@ layout: layouts/base
 ---
 <main class="portfolio-container">
   {% include floating-nav, menuToRender: menus.main %}
+  {% include fixed-top-nav, menuToRender: menus.main %}
+  <article>
   <h1>Portfolios</h1>
   <section class="leadership">
     <h2>{{pages[0].title}}</h2>
@@ -13,9 +15,9 @@ layout: layouts/base
       </a>
     {% endfor %}
   </section>
-  <div class="rule-extender">
+  <!-- <div class="rule-extender">
     <div class="rule-gap-fill">&nbsp;</div>
-  </div>
+  </div> -->
   <section class="individual">
     <h2>{{pages[1].title}}</h2>
     {% for item in pages[1].items %}
@@ -25,4 +27,6 @@ layout: layouts/base
     </a>
     {% endfor %}
   </section>
+  </article>
 </main>
+{% include footer %}
