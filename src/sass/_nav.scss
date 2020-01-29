@@ -83,3 +83,48 @@
     flex: 1 0 auto;
   }
 }
+
+.fixed-top-nav { 
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+.floating-nav {
+  display: none;
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  padding: 1rem 2rem 0; 
+  margin-bottom: 2rem;
+
+  .site-title {
+    flex: 0 0 auto;
+    padding-right: 1.5rem;
+  }
+  .floating-nav-list {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    li {
+      margin-right: 0.75rem;
+
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: $dark;
+      box-shadow: inset 0 0 0 #ccc;
+      &:hover{
+        box-shadow: $link-hover-shadow;
+      }
+    }
+  }
+}
