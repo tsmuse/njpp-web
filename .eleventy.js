@@ -1,5 +1,5 @@
 module.exports = function(eleventyConfig){
-  eleventyConfig.setTemplateFormats(['liquid','md', 'css', 'svg', 'png', 'jpg']);
+  eleventyConfig.setTemplateFormats(['liquid','md', 'css', 'svg', 'png', 'jpg', 'map']);
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPairedShortcode('cleared-list', function (listitems){
