@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 });
 
 function registerNavMenu(){
-  document.querySelector('.fixed-nav-toggle').onclick = () => {
-    const navMenu = document.querySelector('.fixed-nav-list');
+  document.querySelector('.nav-toggle').onclick = () => {
+    const navMenu = document.querySelector('.nav-list');
     if(navMenu.classList.contains('open')){
       navMenu.classList.remove('open');
       return;

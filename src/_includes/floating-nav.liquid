@@ -1,8 +1,0 @@
-<nav class="floating-nav">
-  <p class="site-title">Tony Santos</p>
-  <ul class="floating-nav-list">
-    {% for item in menuToRender %}
-    <li><a href="/{{item}}/">{{ item | replace: "-", " " | capitalize }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>

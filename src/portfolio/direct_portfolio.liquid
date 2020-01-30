@@ -7,8 +7,7 @@ pagination:
 permalink: "portfolio/{{dp.title | slug }}/"
 ---
 <main class="direct-portfolio">
-  {% include floating-nav, menuToRender: menus.directPortfolio %}
-  {% include fixed-top-nav, menuToRender: menus.directPortfolio %}
+  {% include top-nav, menuToRender: menus.main %}
   <section class="sidebar">
     <h1>{{dp.title}}</h1>
     {% for p in dp.sidebar %}

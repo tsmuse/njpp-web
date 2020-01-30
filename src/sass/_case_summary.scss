@@ -4,6 +4,9 @@
 
 .case-summary-main {
   padding-top: $fixed-menu-bar-height; 
+  @media screen and (min-width: 1024px) {
+    padding-top: 0;
+  }
 }
 
 $shape-height: 280px;
@@ -103,6 +106,9 @@ $shape-height: 280px;
     
     max-width: 84ch;
     margin: 0 auto;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-top: 0;
   }
 
   h1 {
