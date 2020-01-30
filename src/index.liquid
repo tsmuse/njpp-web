@@ -1,33 +1,28 @@
 ---
 layout: layouts/base
 ---
-<div class="home-content-contaier">
-  <header>
-    <h1>Tony Santos, Designer</h1>
-    {% include main_nav %}
-  </header>
-  <section class="portfolio-preview">
-    <!-- need to bring portfolio content in first -->
-  </section>
-  <section class="words-recent">
-    <h2>Latest words i've said</h2>
-    {% assign words_preview = collections.words | reverse | first %}
-    {{words_preview.url}}
-  </section>
-  <section class="playground-recent">
-    <h2>Latest playground</h2>
-    {% assign playground_preview = collections.playground | reverse | first %}
-    {{playground_preview.url}}
-  </section>
-  <section class="playground-recent">
-    <h2>Latest Code Like a Designer</h2>
-    {% assign clad_preview = collections.CLAD | reverse | first %}
-    {{clad_preview.url}}
-  </section>
-  <section class="humane-recent">
-    <h2>Latest Humane Systems</h2>
-    {% assign hs_preview = collections.hs | reverse | first %}
-    {{hs_preview.url}}
-  </section>
-  {% include footer %}
-<div>
+<main class="home-container">
+  {% include floating-nav, menuToRender: menus.main %}
+  {% include fixed-top-nav, menuToRender: menus.main %}
+  <article>
+    <p>
+      I՚m an <em class="highlights">interaction designer,</em> 
+      <em class="highlights">design technologist,</em> &amp; 
+      <em class="highlights">design leader</em> in Seattle, WA. 
+    </p>
+    <p>
+      I՚m a toolmaker striving to enable people with technology. I'm focused
+      on <em class="highlights">design systems,</em> 
+      <em class="highlights">accessability,</em> and systems that empower people to do 
+      more than they would be able to on their own. 
+    </p>
+    <p>
+      Previously, I led design & product efforts at 
+      <em class="highlights">RStudio,</em> 
+      <em class="highlights">Simppler,</em>
+      <em class="highlights">Mozilla,</em> &amp; 
+      <em class="highlights">T-Mobile</em> among others.
+    </p>
+  </article>
+</main>
+{% include footer %}
