@@ -137,7 +137,11 @@ $shape-height: 280px;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
   }
-
+  blockquote p {
+    font-style: italic;
+    font-size: 1.15rem;
+    padding: 1rem 3rem;
+  }
   ul,
   ol {
     margin-top: 0;
