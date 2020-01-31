@@ -1,0 +1,30 @@
+---
+layout: layouts/base
+---
+<main class="words-index">
+  {% include top-nav, menuToRender: menus.main %}
+  <h1 class="big-headline">Words i said</h1>
+  {% for post in collections.words reversed %}
+    {% assign postYear = post.data.date | date: "%Y" %}
+    {% if forloop.first == true %}
+      {% assign currentYear = postYear %}
+      <h2 class="section-title">{{currentYear}}</h2>
+      <ul class="classy-list">  
+    {% elsif postYear != currentYear %}
+      {% assign currentYear = postYear %}
+      </ul>
+      <h2 class="section-title">{{currentYear}}</h2>
+      <ul class="classy-list">
+    {% endif %} 
+      <li>
+        <a href="{{post.url}}">
+          <h3>{{post.data.title}}</h3>
+          <p> {{ post.data.blurb |default: "blurb goes here" }} </p>
+        </a>
+      </li>
+    {% if forloop.last == true %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</main>
+{% include footer %}
