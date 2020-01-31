@@ -19,11 +19,11 @@ module.exports = {
           thumbnail: '',
           desc: 'Leading a team in a large company through reorgs to deliver an ecosystem that empowered web developers to bring their creativity to mobile devices.',
         },
-        {
-          title: 'T-Mobile',
-          thumbnail: '',
-          desc: 'Leading a team of early career designers, researchers, and developers updating legacy customer support systems for touch screens and modern devices.',
-        },
+        // {
+        //   title: 'T-Mobile',
+        //   thumbnail: '',
+        //   desc: 'Leading a team of early career designers, researchers, and developers updating legacy customer support systems for touch screens and modern devices.',
+        // },
       ],
     },
     {
