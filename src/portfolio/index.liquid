@@ -4,27 +4,35 @@ layout: layouts/base
 <main class="portfolio-container">
   {% include top-nav, menuToRender: menus.main %}
   <article>
-  <h1>Portfolios</h1>
+  <h1 class="big-headline">Portfolios</h1>
   <section class="leadership">
-    <h2>{{pages[0].title}}</h2>
+    <h2 class="section-title">{{pages[0].title}}</h2>
+    <ul class="classy-list">
     {% for item in pages[0].items %}
-      <a href="/portfolio/{{item.title | replace: " ", "-"| downcase}}/">
-        <h3>{{item.title | capitalize }}</h3>
-        <p>{{item.desc}}</p>
-      </a>
+      <li> 
+        <a href="/portfolio/{{item.title | replace: " ", "-"| downcase}}/">
+          <h3>{{item.title | capitalize }}</h3>
+          <p>{{item.desc}}</p>
+        </a>
+      </li>
     {% endfor %}
+    </ul>
   </section>
   <!-- <div class="rule-extender">
     <div class="rule-gap-fill">&nbsp;</div>
   </div> -->
   <section class="individual">
-    <h2>{{pages[1].title}}</h2>
+    <h2 class="section-title">{{pages[1].title}}</h2>
+    <ul class="classy-list">
     {% for item in pages[1].items %}
-    <a href="/portfolio/{{item.title | replace: " ", "-"| downcase}}/">
-      <h3>{{item.title | capitalize }}</h3>
-      <p>{{item.desc}}</p>
-    </a>
+    <li>
+      <a href="/portfolio/{{item.title | replace: " ", "-"| downcase}}/">
+        <h3>{{item.title | capitalize }}</h3>
+        <p>{{item.desc}}</p>
+      </a>
+    </li>
     {% endfor %}
+    </ul>
   </section>
   </article>
 </main>
