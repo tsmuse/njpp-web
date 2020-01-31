@@ -6,12 +6,6 @@ title: "Mozilla Open Web Aps team: Firefox Marketplace Redesign"
 
 The Open Web Apps team was focused primarily on building an ecosystem for developers to build and publish mobile friendly web apps that had access to modern smartphone features (e.g. GPS, accelerometers, etc) and for users of Android and FirefoxOS devices to discover and acquire them. The hub of this effort was the Firefox Marketplace, our app store and publishing platform. My design team of six designers lead multiple Open Web Apps initiatives starting with the redesign of the Firefox Marketplace.
 
-<!-- <div class="case-summary-image case-summary-image-right "style="color:hotpink; text-align:center; background: black;height:500px;width:400px;display:flex;flex-flow:column nowrap;justify-content:center;">image sizer</div> -->
-<!-- <picture class="case-summary-image case-summary-image-right">
-  <source srcset="/portfolio/imgs/mozilla/marketplace-tablet-grid-mobile.png" alt="The Feed in a tablet sized viewport" media="(max-width: 767px)"/>
-  <img src="/portfolio/imgs/mozilla/marketplace-tablet-grid-400px.png" alt="The Feed in a tablet sized viewport"/>
-</picture> -->
-
 {% case-summary-image, "right", "/portfolio/imgs/mozilla/marketplace-tablet-grid-400px.png", "/portfolio/imgs/mozilla/marketplace-tablet-grid-mobile.png" %} 
   The Feed in a tablet sized viewport, a grid of varied card components each with either collections of app icons, positive app reviews, or  articles about an app.
 {% endcase-summary-image %}
