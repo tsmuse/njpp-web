@@ -1,6 +1,8 @@
 ---
+title: "Three ways to test your design's blind spots"
 date: 2014-09-21
 tags: "words"
+blurb: "Hey you, test your designs. Here are three ways you can."
 ---
 # Three ways to test your design's blind spots
 

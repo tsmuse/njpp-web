@@ -1,6 +1,8 @@
 ---
+title: "Hiring is a process to be designed"
 date: 2016-05-02
 tags: "words"
+blurb: "A discussion about how to evaluate design talent without resorting to speculative work (aka homework) or high pressure on-site challenges."
 ---
 
 # Hiring is a process to be designed

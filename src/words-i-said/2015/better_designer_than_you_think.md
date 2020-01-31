@@ -1,6 +1,8 @@
 ---
+title: "You're a better designer than you think"
 date: 2015-12-19
 tags: "words"
+blurb: "Stop telling me you aren't a designer and start practicing thinking like one."
 ---
 # You're a better designer than you think
 

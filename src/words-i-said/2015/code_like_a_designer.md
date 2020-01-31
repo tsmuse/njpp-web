@@ -1,6 +1,8 @@
 ---
+title: "Code like a designer"
 date: 2015-06-16
 tags: "words"
+blurb: "Thoughts on knowing the medium you design for, using code as a design tool, and how computer programming is more than just 'engineering'"
 ---
 # Code like a designer
 

@@ -1,6 +1,8 @@
 ---
+title: "Critique vs Feedback: Knowing the difference Might Just Save Your Life™"
 date: 2016-03-04
 tags: "words"
+blurb: "A quick how-to about how to run a critique session and how critiquing work if different from getting feedback on it."
 ---
 # Critique vs Feedback: Knowing the difference Might Just Save Your Life™
 

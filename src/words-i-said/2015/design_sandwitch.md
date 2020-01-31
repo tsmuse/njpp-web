@@ -1,6 +1,8 @@
 ---
+title: "You can learn a lot of design from a sandwich"
 date: 2015-10-30
 tags: "words"
+blurb: "A tasty fable about subjectivity and constraints"
 ---
 
 # You can learn a lot of design from a sandwich
@@ -15,7 +17,7 @@ At first you just ask your Facebook and Twitter friends, "Are tomatoes part of a
 
 Jenny decides to ask your shared friends a different question, "What is on a grilled cheese sandwich?" And as you look over the responses you find that while there are no tomatoes on a lot of them, a lot of them are also missing egg. Some of them are just….ugg, bread and cheese. Is a sandwich just a subjective thing then? Can a grilled cheese be whatever we want it to be? Undefinable outside of the individual? Maybe not, for one thing all the recipes you are now getting in response to Jenny's question have things in common: they all have bread of some kind, cheese of some kind, and they're all hot. But why are they so different? So you ask some of your friends some other questions: "Why don't you have a fried egg on your sandwich?", "Why olive oil instead of butter?", "Why no ham?" and what you start to hear are answers like "I'm allergic to eggs", "Olive oil is cheaper than butter, but it browns the bread just as well", and "I'm a vegetarian."
 
-  Is a sandwich just a subjective thing then? Can a grilled cheese be whatever we want it to be? Undefinable outside of the individual?
+Is a sandwich just a subjective thing then? Can a grilled cheese be whatever we want it to be? Undefinable outside of the individual?
 You start to see constraints and goals in the answers your getting. This is all very good information to have, because you were planning on having people over next week and now you can modify your sandwich to make sure you don't accidentally make a sandwich that costs too much, makes someone violate their ethics on eating meat, or maybe even sends them to the hospital.
 
 You realize sandwiches aren't subjective, they're just fulfilling different needs and living inside different systems of constraints, and that's why they are different. And everyone loves a well thought out sandwich.

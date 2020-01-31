@@ -1,6 +1,8 @@
 ---
+title: "Real Designers Test"
 date: 2016-03-04
 tags: "words"
+blurb: "A summary of usability testing process I put in place at Mozilla to allow people with low or no usability training conduct usability studies on our products."
 ---
 
 # Real Designers Test
