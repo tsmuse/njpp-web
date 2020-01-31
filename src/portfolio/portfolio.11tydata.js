@@ -1,4 +1,5 @@
 module.exports = {
+  layout: 'layouts/case_summary',
   pages: [
     {
       title: 'Leadership',

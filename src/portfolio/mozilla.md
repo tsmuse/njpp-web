@@ -1,5 +1,4 @@
 ---
-layout: layouts/case_summary
 title: "Mozilla Open Web Aps team: Firefox Marketplace Redesign"
 ---
 
