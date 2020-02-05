@@ -11,7 +11,20 @@ module.exports = function(eleventyConfig){
     side,
     imageSrc, 
     mobileImageSrc){
-    let sideClass = side === 'left' ? 'case-summary-image-left' : 'case-summary-image-right';
+      
+    // let sideClass = side === 'left' ? 'case-summary-image-left' : 'case-summary-image-right';
+    let sideClass;
+    switch(side){
+      case 'left':
+        sideClass = 'case-summary-image-left';
+        break;
+      case 'right':
+        sideClass = 'case-summary-image-right';
+        break;
+      default:
+        sideClass = '';
+    }
+
     return `<picture class="case-summary-image ${sideClass}">
   <source srcset="${mobileImageSrc}" alt="${alt}"
     media="(max-width: 767px)" />
