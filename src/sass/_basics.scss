@@ -71,13 +71,16 @@ footer {
 .big-headline {
   display: block;
   width: 100%;
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 1;
   font-weight: $bold-type;
   padding: 0 1rem;
   @media screen and (min-width: 768px) {
-    font-size: 8.5rem;
+    font-size: 7rem;
     padding: 0 2rem;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 8.5rem;
   }
 }
 
