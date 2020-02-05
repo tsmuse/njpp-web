@@ -34,15 +34,15 @@ module.exports = {
         "Thanks stopping by, let's talk soon!",
       ],
       items: [
-        {
-          title: 'LustRe',
-          thumbnail: '',
-          desc: 'A design system to empower data scientists to create usable , acessible, well designed web applications.',
-        },
+        // {
+        //   title: 'LustRe',
+        //   thumbnail: '',
+        //   desc: 'A design system to empower data scientists to create usable , accessible, well designed web applications.',
+        // },
         {
           title: 'Sandwich UI',
           thumbnail: '',
-          desc: 'A design system to empower a small, scrappy team to deliver human-cenrered design.',
+          desc: 'A design system to empower a small, scrappy team to deliver human-centered design.',
         },
         {
           title: 'MDN Redesign',
