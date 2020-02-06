@@ -1,0 +1,30 @@
+---
+layout: layouts/base
+pagination:
+  data: pages
+  size: 1
+  alias: dp
+permalink: "portfolio/{{dp.title | slug }}/"
+---
+<main class="direct-portfolio">
+  {% include top-nav, menuToRender: menus.main %}
+  <section class="sidebar">
+    <h1>{{dp.title}}</h1>
+    {% for p in dp.sidebar %}
+      <p>{{ p }}</p>
+    {% endfor %}
+  </section>
+  <section class="content">
+    <ul class="portfolio-items">
+      {% for item in dp.items %}
+        <li>
+          <a href="/portfolio/{{item.title | replace: " ", "-"| downcase }}/">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.desc }}</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% include footer %}
+</main>

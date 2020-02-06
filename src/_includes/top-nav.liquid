@@ -1,0 +1,9 @@
+<nav class="top-nav">
+  <a href="/" class="site-title title-link">Tony Santos</a>
+  <button class="nav-toggle">menu</button>
+  <ul class="nav-list">
+    {% for item in menuToRender %}
+    <li><a href="/{{item}}/">{{ item | replace: "-", " " }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,91 @@
+.top-nav {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: fixed;
+  height: $fixed-menu-bar-height;
+  background-color: #fff;
+  z-index: 10;
+  padding: 0 1rem;
+  
+
+  @media screen and (min-width: 1024px) {
+    position: static;
+    height: auto;
+    background-color: transparent;
+    padding: 1rem 2rem 0; 
+    margin-bottom: 2rem;
+  }
+
+
+}
+.site-title {
+  flex: 1;
+  font-size: 2rem;
+  padding-right: 1.5rem;
+  @media screen and (min-width: 930px) {
+    flex: 0 0 auto;
+  }
+}
+.nav-list {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  background: $pale;
+  height: 100vh;
+  width: 90vw;
+  max-width: 400px;
+  position: absolute;
+  top: $fixed-menu-bar-height;
+  left: -100vw;
+  transition: left 0.4s ease-out;
+  padding: 2rem;
+  
+  &.open {
+    left: 0;
+  }
+
+  @media screen and (min-width: 930px){
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    height: auto;
+    width: auto;
+    max-width: unset;
+    position: static;
+    transition: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    @media screen and (min-width: 930px){
+      margin-right: 0.75rem;
+      margin-bottom: 0;
+      
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.nav-toggle {
+  display: inline-block;
+  background: transparent;
+  font-size: 1.2rem;
+  border: 1px solid $dark;
+  @media screen and (min-width: 930px){
+    display: none;
+  }
+}
+
