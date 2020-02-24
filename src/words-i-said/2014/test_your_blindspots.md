@@ -6,7 +6,6 @@ blurb: "Hey you, test your designs. Here are three ways you can."
 ---
 # Three ways to test your design's blind spots
 
-!['./imgs/testing.jpg']
 I've been spending a lot of time in the last few weeks working on all the content for my upcoming Mobile UX class. It's been a great excuse to look at my everyday process and the things I've set up for my team. There's a lot of stuff I could, and probably will, write about here but right now I want to talk about testing a design once you've come up with it. Let's jump in, shall we?
 
 ## Why do we test designs?
