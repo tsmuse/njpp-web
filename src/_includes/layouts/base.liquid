@@ -12,7 +12,9 @@
   <link href="/css/njpp.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
+  {% include top-nav, menuToRender: menus.main %}
   {{content}}
+  {% include footer %}
 </body>
 <script src="/js/njpp.js" type="text/javascript"></script>
 </html>

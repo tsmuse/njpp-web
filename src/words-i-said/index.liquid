@@ -2,7 +2,6 @@
 layout: layouts/base
 ---
 <main class="words-index">
-  {% include top-nav, menuToRender: menus.main %}
   <h1 class="big-headline">Words i said</h1>
   {% for post in collections.words reversed %}
     {% assign postYear = post.data.date | date: "%Y" %}
@@ -27,4 +26,3 @@ layout: layouts/base
     {% endif %}
   {% endfor %}
 </main>
-{% include footer %}
