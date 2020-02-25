@@ -10,7 +10,6 @@ body {
 
   main {
     flex: 1;
-  }
 }
 
 a {
@@ -137,4 +136,32 @@ footer {
       max-width: 84ch;
     }
   }
+}
+
+.offline{
+  padding: 1rem;
+  padding-top: $fixed-menu-bar-height; 
+  
+    @media screen and (min-width: 1024px) {
+      padding: 2rem;
+    }
+  }
+
+  h1 {
+    font-weight: $book-type;
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 3.5rem;  
+    }
+    
+    
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
 }
